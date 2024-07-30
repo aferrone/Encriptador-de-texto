@@ -1,7 +1,8 @@
-Encriptador de Texto
+<h1>Encriptador de Texto</h1>
+
 Este proyecto es una aplicación web simple para encriptar y desencriptar texto utilizando un conjunto de reglas predefinidas. Permite al usuario ingresar texto en un campo de entrada, encriptar o desencriptar el texto, y copiar el resultado al portapapeles. Además, incluye una función para limpiar ambos campos de texto.
 
-Funcionalidades:
+<h2>Funcionalidades:</h2>
 
 Encriptar Texto: Convierte el texto de entrada en una cadena encriptada según las reglas definidas.
 
@@ -11,7 +12,7 @@ Copiar Texto: Copia el texto encriptado al portapapeles para facilitar su uso en
 
 Limpiar Campos: Borra el contenido de los campos de entrada y salida.
 
-Tecnologías Utilizadas:
+<h3>Tecnologías Utilizadas:</h3>
 
 HTML: Estructura de la página web.
 CSS: Estilos básicos para la disposición de los elementos.
