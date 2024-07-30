@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="styles/imagenes/alura.png" alt="logo">
+    </header>
+    <main>
+        <section>
+                <h1 class="titulo">Encriptador de Texto</h1>
+            <div class="cuadro_texto">
+                <textarea class="entrada" id="textoEntrada" cols="30" rows="5" placeholder="Ingrese el texto aquí:"></textarea>
+            </div>
+            <div class="botones">
+                <button onclick="encriptarTexto()" class="encriptar">Encriptar</button>
+                <button onclick="desencriptarTexto()" class="desencriptar">Desencriptar</button>
+                <button onclick="limpiarTexto()" class="limpiar">Limpiar</button>
+            </div>
+            <div class="resultado_texto">
+                <textarea class="texto2" id="textoEncriptado" cols="30" rows="5" placeholder="Aqui verás el resultado: "></textarea>
+            </div>
+            <div class="boton_copiar">
+                <button onclick="copiarTexto()" class="copiar">Copiar</button>
+            </div>
+        </section> 
+ </main>    
+
+<script src="app.js"></script>
+<footer class="pie_de_pagina">
+    <p class="texto_pie_pagina">----App desarrollada por Alejandro Velazquez</p>
+    <p>----Argentina----2024</p>
+    </footer>
+
+          
+
+</body>
+</html>
