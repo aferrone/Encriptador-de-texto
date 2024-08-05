@@ -1,15 +1,14 @@
 const texto = {
-        'a': '11a22i44g',
-        'e': '85nt567er',
-        'i': '34m36e7sd',
-        'o': '346b657er',
-        'u': '636f36a36',
-        '?': 'nqqwsaalo'
+        'a': 'ai',
+        'e': 'enter',
+        'i': 'imes',
+        'o': 'ober',
+        'u': 'ufat',
+        
 };
 
 function encriptar(entradaUsuario) {
     let textoEncriptado = "";
-    entradaUsuario = entradaUsuario.toLowerCase();
 
     for (let i = 0; i < entradaUsuario.length; i++) {
         const letra = entradaUsuario[i];
@@ -24,7 +23,8 @@ function encriptar(entradaUsuario) {
 
 function desencriptar(textoEncriptado) {
     let textoDesencriptado = textoEncriptado;
-    for (const [letra,codigo] of Object.entries(texto)) {
+    const ordenadoTexto = Object.entries(texto).sort((a,b) => b[1].length - a[1].length);
+    for (const [letra,codigo] of ordenadoTexto) {
         textoDesencriptado = textoDesencriptado.split(codigo).join(letra);
     }
     return textoDesencriptado;
@@ -32,9 +32,15 @@ function desencriptar(textoEncriptado) {
 
 function encriptarTexto(){
     const entrada = document.getElementById("textoEntrada").value;
+    if (/[^a-z\s\?]/.test(entrada)) {
+        alert("La entrada contiene caracteres inválidos, no esta permitido las mayusculas ni acentos.")
+        document.getElementById("textoEncriptado").value = "";
+        return;
+    }
     const resultado = encriptar(entrada);
-    document.getElementById("textoEncriptado").value = resultado;
+    document.getElementById("textoEncriptado").value = resultado; 
 }
+
 
 
 
